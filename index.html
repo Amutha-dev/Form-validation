@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Advanced Form Validation</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="container">
+    <h2>Create Account</h2>
+    <p>Fill details to register</p>
+
+    <form id="form">
+        <div class="input-group">
+            <input type="text" id="username" placeholder="Username">
+            <small>Error</small>
+        </div>
+
+        <div class="input-group">
+            <input type="email" id="email" placeholder="Email">
+            <small>Error</small>
+        </div>
+
+        <div class="input-group password-box">
+            <input type="password" id="password" placeholder="Password">
+            <span class="toggle" onclick="togglePassword('password')">Show</span>
+            <small>Error</small>
+        </div>
+
+        <div class="input-group password-box">
+            <input type="password" id="confirmPassword" placeholder="Confirm Password">
+            <span class="toggle" onclick="togglePassword('confirmPassword')">Show</span>
+            <small>Error</small>
+        </div>
+
+        <button type="submit">Register</button>
+    </form>
+</div>
+
+<!-- Success Modal -->
+<div class="modal" id="successModal">
+    <div class="modal-content">
+        <h3>🎉 Success!</h3>
+        <p>Your account has been created.</p>
+        <button onclick="closeModal()">OK</button>
+    </div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
